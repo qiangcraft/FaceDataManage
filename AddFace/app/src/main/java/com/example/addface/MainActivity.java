@@ -65,7 +65,7 @@ import static com.example.addface.env.ImageUtils.resizeImage;
 public class MainActivity extends AppCompatActivity {
     public static final int FACE_SIZE = 112;
     public static final String VERSION_NO = "1.0.0";
-    public static final String OPEN_SOURCE_URL ="https://github.com/qiangz520";
+    public static final String OPEN_SOURCE_URL ="https://github.com/qiangz520/FaceDataManage";
     public static final String CONTACT_EMAIL = "zengqiang18@zju.edu.cn";
 
     //for Http Request
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
     private void showInfo(){
         new AlertDialog.Builder(this)
                 .setTitle("软件信息")
-                .setMessage("版本号： "+VERSION_NO
+                .setMessage("软件版本： "+VERSION_NO
                         +"\n服务器IP： "+IP
                         +"\n软件开源： " +OPEN_SOURCE_URL
                         +"\n软件版权： 浙江大学"
@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 Log.d("OKHTTP", "onResponse: ");
-                speech.say(getString(R.string.succeed_get_faces));
+//                speech.say(getString(R.string.succeed_get_faces));
                 String responseData = response.body().string();
                 Message message = new Message();
                 message.obj = responseData;
