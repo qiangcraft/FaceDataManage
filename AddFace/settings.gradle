@@ -1,0 +1,2 @@
+rootProject.name='AddFace'
+include ':app'

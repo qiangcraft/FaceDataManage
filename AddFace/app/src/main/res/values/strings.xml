@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">人脸管理APP</string>
+    <string name='hello'>点击+添加人脸，点击☆可查看人脸列表和删除人脸。</string>
+    <string name="add_good_face">请尽量选择人脸正脸且清晰的人脸图片!</string>
+    <string name="name_is_empty">姓名不能为空，请重新输入!</string>
+    <string name="face_not_found">图片中未发现人脸，请重新拍摄或选择质量更佳的人脸图片!</string>
+    <string name="succeed_update_face">人脸上传成功!</string>
+    <string name='fail_update_face'>人脸上传失败, 请检查网络！</string>
+    <string name='get_faces_list'>正在获取人脸列表，点击名字可删除对应人脸数据。</string>
+    <string name='select_name'>点击姓名可删除对应人脸</string>
+    <string name="dialog_delete_face_title">删除人脸</string>
+    <string name="dialog_delete_face_message">确认删除这个人的人脸数据吗?</string>
+    <string name="dialog_btn_confirm_text">确定</string>
+    <string name="dialog_btn_cancel_text">取消</string>
+    <string name="dialog_have_deleted_text">你已经删除了他的人脸数据。</string>
+    <string name="person_name_existed">此人已存在，请重新输入！</string>
+    <string name="fail_get_faces">获取人脸数据失败，请检查网络！</string>
+    <string name="succeed_get_faces">成功从云端获取到数据！</string>
+    <string name="succeed_delete_face">成功删除人脸！</string>
+    <string name="fail_delete_face">删除人脸失败，请检查网络设置!</string>
+    <string name="more_info"><u><b>软件信息</b></u></string>
+</resources>
