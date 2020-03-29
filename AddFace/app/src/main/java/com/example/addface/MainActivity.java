@@ -17,6 +17,7 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.net.Uri;
@@ -64,7 +65,7 @@ import static com.example.addface.env.ImageUtils.resizeImage;
 
 public class MainActivity extends AppCompatActivity {
     public static final int FACE_SIZE = 112;
-    public static final String VERSION_NO = "1.0.0";
+    public static final String VERSION_NO = "1.0.1";
     public static final String OPEN_SOURCE_URL ="https://github.com/qiangz520/FaceDataManage";
     public static final String CONTACT_EMAIL = "zengqiang18@zju.edu.cn";
 
@@ -532,6 +533,25 @@ public class MainActivity extends AppCompatActivity {
      */
 
     void processFaceBitmap(Bitmap faceBitmap){
+
+        String originalInfo = " 原图片大小: " + (faceBitmap.getByteCount()) +
+                " 宽度为: " + faceBitmap.getWidth() + " 高度为: " + faceBitmap.getHeight();
+        Log.v("originalInfo", originalInfo);
+
+        float sx = 0.5f;
+        float sy = 0.5f;
+
+        if(faceBitmap != null && (faceBitmap.getHeight() > 4000 || faceBitmap.getWidth() > 4000) ) {
+            Matrix matrix = new Matrix();
+            matrix.setScale(sx, sy);
+            Bitmap newBitmap = Bitmap.createBitmap(faceBitmap, 0, 0, faceBitmap.getWidth(),
+                    faceBitmap.getHeight(), matrix, true);
+            String info = " sx: " + sx + " sy: " + sy + " 压缩图片大小: " + (newBitmap.getByteCount())
+                    + " 宽度为: " + newBitmap.getWidth() + " 高度为: " + newBitmap.getHeight();
+            Log.v("newBitmapInfo", info);
+            faceBitmap = newBitmap;
+        }
+
         StringBuilder faceStrBuilder = new StringBuilder();
         List<FaceAttr> facesList =  mtcnn.detect(faceBitmap);
         try {

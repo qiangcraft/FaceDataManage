@@ -13,6 +13,6 @@
 
 ## 3.人脸后端服务器
 
-> FaceBackEnd.zip
+> FaceBackEnd/
 
 使用Flask + nginx 

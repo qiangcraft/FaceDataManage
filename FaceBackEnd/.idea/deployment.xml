@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="zengqiang@114.55.218.3:22" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="zengqiang@114.55.218.3:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/zengqiang/FaceBackEnd" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="zq@10.214.128.81:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/zq/FaceBackEnd" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
