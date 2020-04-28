@@ -65,13 +65,13 @@ import static com.example.addface.env.ImageUtils.resizeImage;
 
 public class MainActivity extends AppCompatActivity {
     public static final int FACE_SIZE = 112;
-    public static final String VERSION_NO = "1.0.1";
+    public static final String VERSION_NO = "1.0.3";
     public static final String OPEN_SOURCE_URL ="https://github.com/qiangz520/FaceDataManage";
     public static final String CONTACT_EMAIL = "zengqiang18@zju.edu.cn";
 
     //for Http Request
 //    public static final String IP = "http://10.214.193.33:80";
-    public static final String IP = "http://114.55.218.3:80";
+    public static final String IP = "http://47.111.241.52:9001";
     public static final String GET_FACES_URL = IP + "/pull";
     public static final String UPDATE_URL = IP + "/update";
     public static final String DELETE_URL = IP + "/delete?";
