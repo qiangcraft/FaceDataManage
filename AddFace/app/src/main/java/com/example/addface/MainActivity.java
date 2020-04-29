@@ -65,7 +65,7 @@ import static com.example.addface.env.ImageUtils.resizeImage;
 
 public class MainActivity extends AppCompatActivity {
     public static final int FACE_SIZE = 112;
-    public static final String VERSION_NO = "1.0.3";
+    public static final String VERSION_NO = "1.0.4";
     public static final String OPEN_SOURCE_URL ="https://github.com/qiangz520/FaceDataManage";
     public static final String CONTACT_EMAIL = "zengqiang18@zju.edu.cn";
 
@@ -319,13 +319,14 @@ public class MainActivity extends AppCompatActivity {
      */
     private void InputName(){
         final EditText et_input_name = new EditText(this);
+        et_input_name.setMaxLines(1);
         et_input_name.setText("");
         new AlertDialog.Builder(this).setTitle("请输入待添加人脸对应姓名")
                 .setIcon(R.drawable.ic_smile)
                 .setView(et_input_name)
                 .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
-                        personName = et_input_name.getText().toString();
+                        personName = et_input_name.getText().toString().trim();
                         if (personName.equals("")) {
                             Toast.makeText(MainActivity.this, getString(R.string.name_is_empty), Toast.LENGTH_SHORT).show();
 //                            speech.say(getString(R.string.name_is_empty));
